@@ -43,6 +43,11 @@ namespace Task3.Logic
                 }
             }
 
+            if (_array.Length == _count)
+            {
+                Expand(_array.Length * 2);
+            }
+
             _count++;
             _array[_count] = item;
             return true;
@@ -197,6 +202,13 @@ namespace Task3.Logic
                 }
             }
             return -1;
+        }
+
+        private void Expand(int capacity)
+        {
+            T[] destinationArray = new T[capacity];
+            Array.Copy(_array, 0, destinationArray, 0, _count);
+            _array = destinationArray;
         }
 
         private void UniformArray(int pos)
