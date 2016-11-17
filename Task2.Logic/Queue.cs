@@ -34,7 +34,7 @@ namespace Task2.Logic
         {
             if (_size == _array.Length)
             {
-                int capacity = _array.Length * 2;
+                int capacity = _array.Length * 2 + 1;
                 Expand(capacity);
             }
             _array[_tail] = item;

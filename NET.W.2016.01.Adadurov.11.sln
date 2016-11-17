@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Logic", "Task2.Logic\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.Logic", "Task3.Logic\Task3.Logic.csproj", "{72870978-20D0-4444-A06F-D4D2261E52E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.Logic.Tests", "Task3.Tests\Task3.Logic.Tests.csproj", "{7A226678-ACA8-4314-BB9A-F67EC827BA2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12634BEC-5213-4B94-8BA6-2C69667A5FF2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Logic.Tests", "Task2.Logic.Tests\Task2.Logic.Tests.csproj", "{67E769AC-E705-423F-9198-4E1A4A51FA92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +36,14 @@ Global
 		{72870978-20D0-4444-A06F-D4D2261E52E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72870978-20D0-4444-A06F-D4D2261E52E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72870978-20D0-4444-A06F-D4D2261E52E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A226678-ACA8-4314-BB9A-F67EC827BA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A226678-ACA8-4314-BB9A-F67EC827BA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A226678-ACA8-4314-BB9A-F67EC827BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A226678-ACA8-4314-BB9A-F67EC827BA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E769AC-E705-423F-9198-4E1A4A51FA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E769AC-E705-423F-9198-4E1A4A51FA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E769AC-E705-423F-9198-4E1A4A51FA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E769AC-E705-423F-9198-4E1A4A51FA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

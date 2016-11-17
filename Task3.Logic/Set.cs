@@ -43,13 +43,12 @@ namespace Task3.Logic
                 }
             }
 
-            if (_array.Length == _count)
+            if (_array.Length == _count + 1)
             {
                 Expand(_array.Length * 2);
             }
 
-            _count++;
-            _array[_count] = item;
+            _array[_count++] = item;
             return true;
         }
 
@@ -68,7 +67,7 @@ namespace Task3.Logic
 
         public bool Equals(Set<T> other)
         {
-            if (other == null)
+            if (ReferenceEquals(this, null))
                 return false;
 
             if (this.Count != other.Count)
