@@ -14,14 +14,26 @@ namespace Task3.Logic
         private IEqualityComparer<T> _comparer;
         private const int defaultInitialSize = 10;
 
+        /// <summary>
+        /// Create empty set
+        /// </summary>
         public Set() : this(EqualityComparer<T>.Default, defaultInitialSize)
         {
         }
 
+        /// <summary>
+        /// Create set with initial size
+        /// </summary>
+        /// <param name="initialSize">Size of set</param>
         public Set(int initialSize) : this(EqualityComparer<T>.Default, initialSize)
         {
         }
 
+        /// <summary>
+        /// Create set with initial size & comparer
+        /// </summary>
+        /// <param name="comparer">Comparer for the objects</param>
+        /// <param name="initialSize">Initial size of the set</param>
         public Set(IEqualityComparer<T> comparer, int initialSize)
         {
             if (comparer == null)
@@ -33,6 +45,11 @@ namespace Task3.Logic
             _comparer = comparer;
         }
 
+        /// <summary>
+        /// Add item to the set.
+        /// </summary>
+        /// <param name="item">Element to add to the set</param>
+        /// <returns>true - if item added to the set; false - if set already have that item;</returns>
         public bool Add(T item)
         {
             for (int i = 0; i < _count; i++)
@@ -52,6 +69,11 @@ namespace Task3.Logic
             return true;
         }
 
+        /// <summary>
+        /// Removes element from the set
+        /// </summary>
+        /// <param name="item">Element to remove</param>
+        /// <returns>true - successfully removed; false - there is no such element in the set;</returns>
         public bool Remove(T item)
         {
             int pos = Find(item);
@@ -65,6 +87,11 @@ namespace Task3.Logic
             return false;
         }
 
+        /// <summary>
+        /// Compare two sets by values (not references)
+        /// </summary>
+        /// <param name="other">Set to compare with</param>
+        /// <returns>true - sets are equal; false - sets are not equal</returns>
         public bool Equals(Set<T> other)
         {
             if (ReferenceEquals(this, null))
@@ -107,6 +134,9 @@ namespace Task3.Logic
             return base.GetHashCode();
         }
 
+        /// <summary>
+        /// Count of the elements in the set
+        /// </summary>
         public int Count
         {
             get { return _count; }

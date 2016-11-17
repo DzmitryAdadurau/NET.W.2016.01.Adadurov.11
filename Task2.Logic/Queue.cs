@@ -14,11 +14,18 @@ namespace Task2.Logic
         private int _tail;
         private int _size;
 
+        /// <summary>
+        /// Creates empty queue
+        /// </summary>
         public Queue()
         {
             _array = new T[0];
         }
 
+        /// <summary>
+        /// Creates queue with custom initial capacity
+        /// </summary>
+        /// <param name="capacity"></param>
         public Queue(int capacity)
         {
             if (capacity < 0)
@@ -30,6 +37,10 @@ namespace Task2.Logic
             _size = 0;
         }
 
+        /// <summary>
+        /// Equeue element to the end
+        /// </summary>
+        /// <param name="item">element to enqueue</param>
         public void Enqueue(T item)
         {
             if (_size == _array.Length)
@@ -42,6 +53,10 @@ namespace Task2.Logic
             _tail++;
         }
 
+        /// <summary>
+        /// Returns next awaiting element int the queue
+        /// </summary>
+        /// <returns>Awaiting element</returns>
         public T Dequeue()
         {
             if (_size == 0)
@@ -53,6 +68,9 @@ namespace Task2.Logic
             return _array[_head];
         }
 
+        /// <summary>
+        /// Clear the queue
+        /// </summary>
         public void Clear()
         {
             _head = 0;
@@ -60,11 +78,18 @@ namespace Task2.Logic
             _size = 0;
         }
 
+        /// <summary>
+        /// Elements count in queue
+        /// </summary>
         public int Count
         {
             get { return _size; }
         }
 
+        /// <summary>
+        /// Creates enumerator for the queue
+        /// </summary>
+        /// <returns>IEnumerator object</returns>
         public IEnumerator<T> GetEnumerator()
         {
             return new Enumerator(this);
